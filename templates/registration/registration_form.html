@@ -1,0 +1,32 @@
+{{ template "_master_header.html" . }}
+{{ template "_reg_nav.html" . }}
+{{ template "_reg_sidenav.html" . }}
+<div class="divider"></div>
+<div class="divider"></div>
+
+<br>
+
+<div class="divider"></div>
+
+<div class="section scrollspy teal lighten-3">
+
+  <div class="row">
+    <div class="col s12">
+      <ul class="tabs teal lighten-2">
+        <li class="tab col s4 m4 "><a href="#basic_form"><strong class="white-text text-wrap">Register</strong></a></li>
+        <li class="tab col s4 m4 "><a href="#advance_details"><strong class="white-text">Details</strong></a></li>
+        <li class="tab col s4 m3 "><a href="#photos"><strong class="white-text">Pictures</strong></a></li>
+      </ul>
+    </div>
+
+    {{ template "_reg_basic.html" . }}
+
+    {{ template "_reg_advance.html" . }}
+
+    {{ template "_reg_photo.html" . }}
+  
+  </div>
+
+</div>
+
+{{ template "_master_footer.html" . }}

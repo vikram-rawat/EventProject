@@ -1,0 +1,32 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+ @import url('https://fonts.googleapis.com/css?family=Alex+Brush|Cinzel+Decorative|Cookie|Dancing+Script|Great+Vibes|Libre+Baskerville|Spirax|Kaushan+Script|Lobster|Monoton|Pacifico|Playball|Satisfy|Tangerine');
+
+.heading{
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 24px !important;
+  text-shadow: 4px 4px 4px #aaa;
+}
+
+ul.dropdown-content.select-dropdown li span {
+  color: rgb(163, 9, 252) ; /* no need for !important :) */
+  background-color: rgba(231, 250, 250, 0.87)
+}
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.input-field.col label{
+  color: white;
+}
+
+#mapid { height: 411px; }
