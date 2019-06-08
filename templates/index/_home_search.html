@@ -21,14 +21,13 @@
 
 <form action="/" method="post">
           <div class="input-field col s12">
-            <select name="state">
+            <select name="state" id = "states">
               <option value="" disabled>Choose States You are searching in</option>
-              <option value="Rajasthan" name="Rajasthan">Rajasthan</option>
             </select>
             <label>Choose State</label>
           </div>
 
-          <div class="input-field col s12">
+          <!-- <div class="input-field col s12">
             <select name="district">
               <option value="1">Alwar</option>
               <option value="2">Gurgaon</option>
@@ -38,13 +37,22 @@
               </optgroup>
             </select>
             <label>Choose District</label>
-          </div>
+          </div> -->
+           <!-- Default with no input (automatically generated)  -->
+          <div class="chips"></div>
+          <div class="chips chips-initial"></div>
+          <div class="chips chips-placeholder"></div>
+          <div class="chips chips-autocomplete"></div>
 
-          <div class="input-field col s12">
-            <i class="material-icons prefix">location_city</i>
-            <label for="city">Choose City</label>
-            <input type="text" name="city" id="city"  class="autocomplete">
+          <!-- Customizable input  -->
+          <div class="chips">
+            <input class="custom-class">
           </div>
+          
+          <!-- <div class="chips chips-autocomplete col s12"> </div> -->
+            <!-- <i class="material-icons prefix">location_city</i>
+            <label for="city">Choose City</label>
+            <input type="text" name="city" id="city"  class="autocomplete"> -->
 
           <div class="input-field col s12">
             <i class="material-icons prefix">search</i>

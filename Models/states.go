@@ -1,17 +1,20 @@
 package models
 
-import "log"
+import (
+	"fmt"
+	"log"
+)
 
 // States Type is for recording states table in database.
 type States struct {
-	Statesid   int
-	Countryid  int
-	StatesName string
+	StatesName   string
+	DistrictName string
+	CityName     string
 }
 
 // SQLStates get data from sql query states
 func SQLStates() ([]States, error) {
-	rows, err := DB.Query("SELECT * FROM statics.states")
+	rows, err := DB.Query("SELECT * FROM get_address()")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -20,12 +23,12 @@ func SQLStates() ([]States, error) {
 	for rows.Next() {
 		s := States{}
 		err := rows.Scan(
-			&s.Statesid,
-			&s.Countryid,
 			&s.StatesName,
+			&s.DistrictName,
+			&s.CityName,
 		)
 		if err != nil {
-			log.Fatal(err)
+			fmt.Println(err)
 		}
 		statesSl = append(statesSl, s)
 	}

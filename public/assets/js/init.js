@@ -1,12 +1,9 @@
-(function($){
-  $(function(){
-
-    $('.sidenav').sidenav();
-
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
-
 $(document).ready(function(){
+  (function($){
+    $(function(){
+      $('.sidenav').sidenav();
+    }); // end of document ready
+  })(jQuery); // end of jQuery name space
 
   $('.sidenav').sidenav();
   
@@ -16,22 +13,9 @@ $(document).ready(function(){
     indicators: true
   });
 
-    $('.modal').modal();
+  $('.modal').modal();
   
-    $('select').formSelect();
-
-    $('.fixed-action-btn').floatingActionButton();
-
-
-    $('.scrollspy').scrollSpy();
-
-
-    $('.slider').slider();
-
-    $('.tabs').tabs();
-
   $('.chips').chips();
-
   $('.chips-initial').chips({
     data: [{
       tag: 'Apple',
@@ -41,7 +25,6 @@ $(document).ready(function(){
       tag: 'Google',
     }],
   });
-
   $('.chips-placeholder').chips({
     placeholder: 'Enter a tag',
     secondaryPlaceholder: '+Tag',
@@ -49,48 +32,30 @@ $(document).ready(function(){
   $('.chips-autocomplete').chips({
     autocompleteOptions: {
       data: {
-        'Music': null,
-        'Dance': null,
-        'DJ': null,
-        'Dhol': null,
-        'Flowers': null,
-        'Dance': null,
-        'Transport': null
+        'Apple': null,
+        'Microsoft': null,
+        'Google': null
       },
       limit: Infinity,
       minLength: 1
     }
   });
 
-    $('.datepicker').datepicker();
+  $('select').formSelect();
 
-    $('select').formSelect();
+  $('.fixed-action-btn').floatingActionButton();
 
-    M.updateTextFields();
+  $('.scrollspy').scrollSpy();
 
-    $('.datepicker').datepicker();
+  $('.slider').slider();
 
-    $('input.autocomplete').autocomplete({
-      data: {
-        "Apple": null,
-        "Microsoft": null,
-        "Google": 'https://placehold.it/250x250'
-      },
-    });
+  $('.tabs').tabs();
+
+  $('.datepicker').datepicker();
+
+  $('select').formSelect();
+
+  M.updateTextFields();
+
+  $('.datepicker').datepicker();
 });
-
-
-// var slider = document.getElementById('test-slider');
-// Slider.create(slider, {
-//  start: [20, 80],
-//  connect: true,
-//  step: 1,
-//  orientation: 'horizontal', // 'horizontal' or 'vertical'
-//  range: {
-//    'min': 0,
-//    'max': 100
-//  },
-//  format: wNumb({
-//    decimals: 0
-//  })
-// });

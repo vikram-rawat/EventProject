@@ -1,4 +1,4 @@
-package main
+package routes
 
 import (
 	models "EventShoop/Models"
@@ -8,12 +8,9 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func main() {
-	r := allroutes()
-	r.Run(":9090") // listen and serve on 0.0.0.0:9090
-}
-
-func allroutes() *gin.Engine {
+// Allroutes : used for creating and managing
+// all the routes
+func Allroutes() *gin.Engine {
 	r := gin.Default()
 	r.LoadHTMLGlob("eventshoop/templates/**/*")
 	r.Static("/public", "eventshoop/public/assets/")
@@ -33,7 +30,6 @@ func apiStates(c *gin.Context) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer models.DB.Close()
 	c.JSON(http.StatusOK, states)
 }
 func home(c *gin.Context) {
