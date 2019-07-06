@@ -12,7 +12,7 @@ type Locations struct {
 
 // SQLLocations get data from sql query states
 func SQLLocations(st string) ([]Locations, error) {
-	query := "SELECT * FROM get_locations(" + st + ")"
+	query := "SELECT * FROM get_location('" + st + "')"
 
 	rows, err := DB.Query(query)
 	if err != nil {

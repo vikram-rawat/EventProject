@@ -4,7 +4,7 @@
 
 CREATE OR REPLACE FUNCTION public.get_address(
 	)
-    RETURNS TABLE(states text, district text, city text) 
+    RETURNS TABLE(states text) 
     LANGUAGE 'plpgsql'
 
     COST 100
@@ -12,31 +12,28 @@ CREATE OR REPLACE FUNCTION public.get_address(
     ROWS 1000
 AS $BODY$
 BEGIN
-return query select 
-s.states_name,
-d.district_name,
-c.city_name
+
+return query 
+select 
+s.states_name
 from
-statics.states as s
-left join
-statics.districts as d
-on 
-s.statesid = d.statesid
-left join
-statics.city as c
-on
-c.districtid = d.districtid;
-END; $BODY$;
+statics.states as s;
+
+END; 
+
+$BODY$;
 
 ALTER FUNCTION public.get_address()
     OWNER TO postgres;
--- FUNCTION: public.get_address()
 
--- DROP FUNCTION public.get_address();
 
-CREATE OR REPLACE FUNCTION public.get_address(
-	)
-    RETURNS TABLE(states text, district text, city text) 
+    -- FUNCTION: public.get_location(text)
+
+-- DROP FUNCTION public.get_location(text);
+
+CREATE OR REPLACE FUNCTION public.get_location(
+	statename text)
+    RETURNS TABLE(location text) 
     LANGUAGE 'plpgsql'
 
     COST 100
@@ -44,21 +41,17 @@ CREATE OR REPLACE FUNCTION public.get_address(
     ROWS 1000
 AS $BODY$
 BEGIN
-return query select 
-s.states_name,
-d.district_name,
-c.city_name
+return query 
+select 
+d.district_name
 from
-statics.states as s
-left join
 statics.districts as d
-on 
-s.statesid = d.statesid
-left join
-statics.city as c
-on
-c.districtid = d.districtid;
-END; $BODY$;
+inner join statics.states as s 
+on d.statesid = s.statesid
+where s.states_name =  stateName;
+END;
 
-ALTER FUNCTION public.get_address()
+$BODY$;
+
+ALTER FUNCTION public.get_location(text)
     OWNER TO postgres;

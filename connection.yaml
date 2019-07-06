@@ -6,4 +6,4 @@ database:
     user: "postgres"
     password: "postgres"
     dbname: "event_shoop"
-    sslmode: "disable"  
+    sslmode: "disable"
