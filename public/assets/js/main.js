@@ -11,7 +11,4 @@ $(document).ready(function(){
     $('#states').append(s);
     $('#states').formSelect();
   });
-
-  
-
 });

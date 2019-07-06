@@ -21,6 +21,7 @@ func Allroutes() *gin.Engine {
 	api := r.Group("/json/api")
 	{
 		api.GET("/states", apiStates)
+		api.GET("/locations", apiLocation)
 	}
 	return r
 }
@@ -32,6 +33,15 @@ func apiStates(c *gin.Context) {
 	}
 	c.JSON(http.StatusOK, states)
 }
+
+func apiLocation(c *gin.Context) {
+	locations, err := models.SQLLocations()
+	if err != nil {
+		log.Fatal(err)
+	}
+	c.JSON(http.StatusOK, locations)
+}
+
 func home(c *gin.Context) {
 	c.HTML(http.StatusOK, "index.html", nil)
 }

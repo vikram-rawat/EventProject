@@ -15,21 +15,32 @@ $(document).ready(function(){
 
   $('.modal').modal();
   
-  $('.chips').chips();
-  $('.chips-initial').chips({
+  // $('.chips').chips();
+  // $('.chips-initial').chips({
+  //   data: [{
+  //     tag: 'Apple',
+  //   }, {
+  //     tag: 'Microsoft',
+  //   }, {
+  //     tag: 'Google',
+  //   }],
+  // });
+
+  // $('.chips-placeholder').chips({
+  //   placeholder: 'Enter a tag',
+  //   secondaryPlaceholder: '+Tag',
+  // }); 
+
+  $('.chips-vikram').chips({
+    placeholder: 'Search a City or District',
+    secondaryPlaceholder: '+Add Location',
     data: [{
-      tag: 'Apple',
-    }, {
-      tag: 'Microsoft',
-    }, {
-      tag: 'Google',
-    }],
-  });
-  $('.chips-placeholder').chips({
-    placeholder: 'Enter a tag',
-    secondaryPlaceholder: '+Tag',
-  });
-  $('.chips-autocomplete').chips({
+          tag: 'Apple',
+        }, {
+          tag: 'Microsoft',
+        }, {
+          tag: 'Google',
+        }],
     autocompleteOptions: {
       data: {
         'Apple': null,
@@ -40,6 +51,7 @@ $(document).ready(function(){
       minLength: 1
     }
   });
+  
 
   $('select').formSelect();
 

@@ -7,9 +7,7 @@ import (
 
 // States Type is for recording states table in database.
 type States struct {
-	StatesName   string
-	DistrictName string
-	CityName     string
+	StatesName string
 }
 
 // SQLStates get data from sql query states
@@ -24,8 +22,6 @@ func SQLStates() ([]States, error) {
 		s := States{}
 		err := rows.Scan(
 			&s.StatesName,
-			&s.DistrictName,
-			&s.CityName,
 		)
 		if err != nil {
 			fmt.Println(err)

@@ -16,7 +16,7 @@ CREATE DATABASE event_shoop
 -- DROP SCHEMA statics ;
 
 CREATE SCHEMA statics
-    AUTHORIZATION postgres;
+AUTHORIZATION postgres;
 
     -- Table: statics.country
 
