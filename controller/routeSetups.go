@@ -8,6 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// api for states name
 func apiStates(c *gin.Context) {
 	states, err := models.SQLStates()
 	if err != nil {
@@ -16,6 +17,7 @@ func apiStates(c *gin.Context) {
 	c.JSON(http.StatusOK, states)
 }
 
+// api for location
 func apiLocation(c *gin.Context) {
 	locations, err := models.SQLLocations("haryana")
 	if err != nil {
@@ -24,15 +26,22 @@ func apiLocation(c *gin.Context) {
 	c.JSON(http.StatusOK, locations)
 }
 
+// serve home page
 func home(c *gin.Context) {
 	c.HTML(http.StatusOK, "index.html", nil)
 }
+
+// serve vendor login page
 func vendorlogin(c *gin.Context) {
 	c.HTML(http.StatusOK, "vendor_login.html", nil)
 }
+
+// serve vendor registration page
 func registration(c *gin.Context) {
 	c.HTML(http.StatusOK, "registration_form.html", nil)
 }
+
+// serve vendor home page
 func vendorpage(c *gin.Context) {
 	c.HTML(http.StatusOK, "vendor_page.html", nil)
 }

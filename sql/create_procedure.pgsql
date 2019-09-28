@@ -27,7 +27,7 @@ ALTER FUNCTION public.get_address()
     OWNER TO postgres;
 
 
-    -- FUNCTION: public.get_location(text)
+-- FUNCTION: public.get_location(text)
 
 -- DROP FUNCTION public.get_location(text);
 
@@ -54,4 +54,4 @@ END;
 $BODY$;
 
 ALTER FUNCTION public.get_location(text)
-    OWNER TO postgres;
+OWNER TO postgres;
