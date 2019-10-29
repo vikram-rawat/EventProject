@@ -8,8 +8,8 @@ import (
 // all the routes
 func Allroutes() *gin.Engine {
 	r := gin.Default()
-	r.LoadHTMLGlob("eventshoop/templates/**/*")
-	r.Static("/public", "eventshoop/public/assets/")
+	r.LoadHTMLGlob("templates/**/*")
+	r.Static("/public", "public/assets/")
 	r.GET("/", home)
 	r.GET("/vendorlogin", vendorlogin)
 	r.GET("/registration", registration)
