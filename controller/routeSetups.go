@@ -28,7 +28,9 @@ func apiLocation(c *gin.Context) {
 
 // serve home page
 func home(c *gin.Context) {
-	c.HTML(http.StatusOK, "index.html", nil)
+	c.HTML(http.StatusOK, "index.html", gin.H{
+		"thisjs": "public/js/main.js",
+	})
 }
 
 // serve vendor login page
