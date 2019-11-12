@@ -19,7 +19,8 @@ func apiStates(c *gin.Context) {
 
 // api for location
 func apiLocation(c *gin.Context) {
-	locations, err := models.SQLLocations("haryana")
+	state := c.Query("state")
+	locations, err := models.SQLLocations(state)
 	if err != nil {
 		log.Fatal(err)
 	}

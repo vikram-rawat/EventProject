@@ -28,5 +28,16 @@ ul.dropdown-content.select-dropdown li span {
 .input-field.col label{
   color: white;
 }
+select.browser-default {
+  position: static;
+  pointer-events: all;
+  opacity: 1;
+  background-color: #e1bee7 !important;
+  width: 100% !important;
+  padding: 5px !important;
+  border: 1px solid #e1bee7 !important;
+  border-radius: 2px !important;
+  height: 3rem !important;
+}
 
 #mapid { height: 411px; }
