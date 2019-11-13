@@ -94,7 +94,7 @@ ALTER TABLE statics.districts
 
 CREATE TABLE statics.city
 (
-    cityid integer NOT NULL DEFAULT nextval('statics.city_cityid_seq'::regclass),
+    cityid serial,
     districtid integer,
     city_name text COLLATE pg_catalog."default",
     CONSTRAINT pk_city_id PRIMARY KEY (cityid),

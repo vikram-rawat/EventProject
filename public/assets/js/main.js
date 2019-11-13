@@ -1,7 +1,6 @@
-$(document).ready(function () {
+// $(document).ready(function () {
 
   //   let location = $.getJSON("/json/api/states");
-
   //   location.then((data) => {
   //     let s = ''
   //     $.each(data,(i,v) => {
@@ -59,23 +58,51 @@ $(document).ready(function () {
     data: {
       mainJson: [],
       states: [],
-      location: []
+      locations: [],
+      statesValue: ""
     },
     mounted: function () {
-      this.location = $.getJSON("/json/api/states");
       this.mainJson = $.getJSON("/json/api/states");
       let s = []
-
       this.mainJson.then((data) => {
         this.states = data;
       });
     },
-    computed: {},
-    watch: {
-      searchStates: function () {
+    computed: {
 
+    },
+    watch: {
+      statesValue: function (newValue, oldValue) {
+        $.getJSON('/json/api/locations', {
+            state: newValue
+          })
+          .then((data) => {
+
+            this.locations = data;
+
+            var storeDict = {}
+
+            $.each(data, (i, v) => {
+              storeDict[v.LocationName] = null
+            });
+
+            console.log(storeDict);
+
+            $('.chips-districts').chips({
+              placeholder: 'Search a City or District',
+              secondaryPlaceholder: '+Add Location',
+              autocompleteOptions: {
+                data: storeDict,
+                limit: Infinity,
+                minLength: 1
+              }
+            });
+
+            $('.chips-districts').material_chip({
+              'data': storeDict
+              });
+          });
       }
     }
   });
-
-});
+// });

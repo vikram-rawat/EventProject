@@ -22,10 +22,16 @@
           </div>
 
           <form action="/" method="post">
-            <div class="input-field col s12 purple lighten-4">
-              <select name="state" id="states" class = "browser-default purple lighten-4">
+            <div class="input-field col s12">
+              <select 
+                name="state" 
+                id="states"
+                v-model="statesValue" 
+                class = "browser-default purple lighten-3">
                 <option value="" disabled selected>Choose States You are searching in</option>
-                <option value="" v-for = "state in states">{%% state.StatesName %%}</option>
+                <option 
+                    :value="state.StatesName"
+                    v-for = "state in states">{%% state.StatesName %%}</option>
               </select>
               <!-- <label>Choose State</label> -->
             </div>
@@ -43,11 +49,10 @@
           </div> -->
 
             <!-- Default with no input (automatically generated)  -->
-            <div class="chips chips-vikram"></div>
 
             <div class="input-field col s12">
               <i class="material-icons prefix">location_city</i>
-              <input type="text" name="searchlocation" id="searchlocation" class="chips-vikram">
+              <input type="text" name="searchlocation" id="searchlocation" class="chips-districts">
               <label for="searchlocation">Give Me a Location</label>
             </div>
 
