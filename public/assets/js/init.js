@@ -30,5 +30,7 @@ $(document).ready(function(){
 
   // M.updateTextFields();
 
+  $('.chips').chips();
+
   $('.datepicker').datepicker();
 });

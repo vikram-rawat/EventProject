@@ -25,7 +25,7 @@ AUTHORIZATION postgres;
 CREATE TABLE statics.country
 (
     countryid smallserial,
-    countryname text COLLATE pg_catalog."default",
+    countryname text NOT NULL,
     CONSTRAINT pk_country PRIMARY KEY (countryid),
     CONSTRAINT unq_country_name UNIQUE (countryname)
 
@@ -46,7 +46,7 @@ CREATE TABLE statics.states
 (
     statesid serial,
     countryid integer,
-    states_name text COLLATE pg_catalog."default",
+    states_name text NOT NULL,
     CONSTRAINT pk_states_id PRIMARY KEY (statesid),
     CONSTRAINT unq_states_name UNIQUE (countryid, states_name)
 ,
@@ -71,7 +71,7 @@ CREATE TABLE statics.districts
 (
     districtid serial,
     statesid integer,
-    district_name text COLLATE pg_catalog."default",
+    district_name text NOT NULL,
     CONSTRAINT pk_district_id PRIMARY KEY (districtid),
     CONSTRAINT unq_district_name UNIQUE (statesid, district_name)
 ,
@@ -96,7 +96,7 @@ CREATE TABLE statics.city
 (
     cityid serial,
     districtid integer,
-    city_name text COLLATE pg_catalog."default",
+    city_name text NOT NULL,
     CONSTRAINT pk_city_id PRIMARY KEY (cityid),
     CONSTRAINT unq_city_name UNIQUE (districtid, city_name)
 ,

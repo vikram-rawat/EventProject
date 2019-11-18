@@ -98,9 +98,9 @@
               }
             });
 
-            $('.chips-districts').material_chip({
-              'data': storeDict
-              });
+            // $('.chips-districts').material_chip({
+            //   'data': storeDict
+            //   });
           });
       }
     }
