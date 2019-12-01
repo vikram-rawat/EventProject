@@ -112,3 +112,12 @@ TABLESPACE pg_default;
 
 ALTER TABLE statics.city
     OWNER to postgres;
+
+-- Table: statics.services
+-- DROP TABLE statics.services;
+CREATE TABLE statics.services(
+    serviceid serial,
+    service_name text not null,
+    PRIMARY KEY (service_name)
+)
+ 

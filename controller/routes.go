@@ -17,6 +17,7 @@ func Allroutes() *gin.Engine {
 	api := r.Group("/json/api")
 	{
 		api.GET("/states", apiStates)
+		api.GET("/services", apiServices)
 		api.GET("/locations", apiLocation)
 	}
 	return r

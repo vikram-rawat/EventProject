@@ -55,3 +55,28 @@ $BODY$;
 
 ALTER FUNCTION public.get_location(text)
 OWNER TO postgres;
+
+
+CREATE OR REPLACE FUNCTION public.get_services(
+	)
+    RETURNS TABLE(services text) 
+    LANGUAGE 'plpgsql'
+
+    COST 100
+    VOLATILE 
+    ROWS 1000
+AS $BODY$
+BEGIN
+
+return query 
+select 
+s.service_name
+from
+statics.services as s;
+
+END; 
+
+$BODY$;
+
+ALTER FUNCTION public.get_services()
+    OWNER TO postgres;

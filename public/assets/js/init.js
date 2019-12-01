@@ -1,16 +1,16 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
-  (function($){
-    $(function(){
+  (function ($) {
+    $(function () {
       $('.sidenav').sidenav();
     }); // end of document ready
   })(jQuery); // end of jQuery name space
 
   $('.sidenav').sidenav();
-  
+
   $('.carousel').carousel({
     fullWidth: true,
-    duration:100,
+    duration: 100,
     indicators: true
   });
 
@@ -27,10 +27,6 @@ $(document).ready(function(){
   $('.datepicker').datepicker();
 
   $('select').formSelect();
-
-  // M.updateTextFields();
-
-  $('.chips').chips();
 
   $('.datepicker').datepicker();
 });
