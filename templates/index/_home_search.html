@@ -20,25 +20,25 @@
         <div class="row">
           <form v-on:submit.prevent action="" method="post">
             <div class="input-field col s12" :class="mainTheme.stateTheme">
-              <select name="state" id="states" v-model="statesValue" class="browser-default purple lighten-3">
+              <select v-model="Value.States" class="browser-default purple lighten-3">
                 <option value="" disabled selected>Choose States You are searching in</option>
-                <option :value="state.StatesName" v-for="state in states">{%% state.StatesName %%}</option>
+                <option :value="state.StatesName" v-for="state in ApiData.States">{%% state.StatesName %%}
+                </option>
               </select>
             </div>
-
-            <div class="col s12 m6 l6" v-if="showLocations">
+            <div class="col s12 m6 l6" v-if="Show.Locations">
               <div class="chips-districts">
                 <input type="text" name="searchlocation" id="searchlocation" class="browser-default purple lighten-3" />
               </div>
             </div>
 
-            <div class="col s12 m12 l12" v-if="showServices">
+            <div class="col s12 m12 l12" v-if="Show.Services">
               <div class="chips-searchItem">
                 <input type="text" name="searchServices" id="searchServices" class="browser-default purple lighten-3" />
               </div>
             </div>
 
-            <div class="col offset-s1 offset-m5 offset-l5" v-if="showBtns">
+            <div class="col offset-s1 offset-m5 offset-l5" v-if="Show.SubmitBtns">
               <button class="btn waves-effect waves-light" type="submit" @click="searchformSubmit" name="action">
                 Submit
                 <i class="material-icons left">location_searching</i>

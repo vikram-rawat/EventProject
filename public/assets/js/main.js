@@ -10,43 +10,47 @@ var searchEngine = new Vue({
         l12: true
       }
     },
-    mainJson: [],
-    states: [],
-    locations: [],
-    services: [],
-    showLocations: false,
-    showServices: false,
-    showBtns: false,
-    statesValue: "",
-    locationsValue: "",
-    servicesValue: ""
-  },
-  methods: {
-    searchformSubmit: function () {
-      console.log(this.statesValue);
-      console.log(this.locationsValue);
-      console.log(this.servicesValue);
+    Show: {
+      SubmitBtns: false,
+      Services: false,
+      Locations: false
+    },
+    Value: {
+      States: "",
+      Locations: "",
+      Services: ""
+    },
+    ApiData: {
+      MainJson: [],
+      States: [],
+      Locations: [],
+      Services: []
     }
   },
+  methods: {
+    searchformSubmit: function () {}
+  },
   mounted: function () {
-    this.mainJson = $.getJSON("/json/api/states");
+    this.ApiData.MainJson = $.getJSON("/json/api/states");
     let s = [];
-    this.mainJson.then(data => {
-      this.states = data;
+    this.ApiData.MainJson.then(data => {
+      this.ApiData.States = data;
     });
   },
   computed: {},
   watch: {
-    statesValue: function (newValue, oldValue) {
-      this.mainTheme.stateTheme.m6 = true
-      this.mainTheme.stateTheme.l6 = true
-      this.mainTheme.stateTheme.m12 = false
-      this.mainTheme.stateTheme.l12 = false
-      this.showLocations = true;
+    "Value.States": function (newValue, oldValue) {
+      this.mainTheme.stateTheme = {
+        m6 = true,
+        l6 = true,
+        m12 = false,
+        l12 = false
+      }
+      this.Show.Locations = true;
       $.getJSON("/json/api/locations", {
         state: newValue
       }).then(data => {
-        this.locations = data;
+        this.ApiData.Locations = data;
         var storeDict = {};
         $.each(data, (i, v) => {
           storeDict[v.LocationName] = null;
@@ -60,22 +64,22 @@ var searchEngine = new Vue({
             minLength: 1
           },
           onChipAdd: (event, chip) => {
-            this.locationsValue = event[0].M_Chips.chipsData;
+            this.Value.Locations = event[0].M_Chips.chipsData;
           },
           onChipDelete: (event, chip) => {
-            this.locationsValue = event[0].M_Chips.chipsData;
+            this.Value.Locations = event[0].M_Chips.chipsData;
           }
         });
       });
     },
-    locationsValue: function (newValue, oldValue) {
-      if (this.locationsValue.length != 0) {
-        this.showServices = true;
+    "Value.Locations": function (newValue, oldValue) {
+      if (this.Value.Locations.length != 0) {
+        this.Show.Services = true;
       } else {
-        this.showServices = false;
+        this.Show.Services = false;
       }
       $.getJSON("/json/api/services").then(data => {
-        this.services = data;
+        this.ApiData.Services = data;
         var serviceDict = {};
         $.each(data, (i, v) => {
           serviceDict[v.ServicesName] = null;
@@ -90,19 +94,19 @@ var searchEngine = new Vue({
             minLength: 1
           },
           onChipAdd: (event, chip) => {
-            this.servicesValue = event[0].M_Chips.chipsData;
+            this.Value.Services = event[0].M_Chips.chipsData;
           },
           onChipDelete: (event, chip) => {
-            this.servicesValue = event[0].M_Chips.chipsData;
+            this.Value.Services = event[0].M_Chips.chipsData;
           }
         });
       });
     },
-    servicesValue: function (newValue, oldValue) {
-      if (this.servicesValue.length != 0) {
-        this.showBtns = true;
+    "Value.Services": function (newValue, oldValue) {
+      if (this.Value.Services.length != 0) {
+        this.Show.SubmitBtns = true;
       } else {
-        this.showBtns = false;
+        this.Show.SubmitBtns = false;
       }
     }
   }
