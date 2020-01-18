@@ -1,3 +1,4 @@
+
 -- Database: event_shoop
 
 -- DROP DATABASE event_shoop;
@@ -11,6 +12,19 @@ CREATE DATABASE event_shoop
     TABLESPACE = pg_default
     CONNECTION LIMIT = -1;
 
+-- add extensions
+
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+CREATE EXTENSION pgcrypto;
+
+-- SCHEMA: basedetails
+
+-- DROP SCHEMA basedetails ;
+
+CREATE SCHEMA basedetails
+AUTHORIZATION postgres;
+
 -- SCHEMA: statics
 
 -- DROP SCHEMA statics ;
@@ -18,7 +32,7 @@ CREATE DATABASE event_shoop
 CREATE SCHEMA statics
 AUTHORIZATION postgres;
 
-    -- Table: statics.country
+-- Table: statics.country
 
 -- DROP TABLE statics.country;
 
@@ -121,3 +135,15 @@ CREATE TABLE statics.services(
     PRIMARY KEY (service_name)
 )
  
+
+-- Table: basedetails.userdetails
+-- DROP TABLE basedetails.userdetails;
+
+CREATE TABLE basedetails.userdetails 
+(
+  super_id UUID NOT NULL DEFAULT uuid_generate_v4() ,
+	user_name  text not null,
+	passwords  text not null,
+	user_type  text not null ,
+  CONSTRAINT pkey_tbl PRIMARY KEY ( user_name )
+)
