@@ -22,7 +22,8 @@
             <div class="input-field col s12" :class="mainTheme.stateTheme">
               <select v-model="Value.States" class="browser-default purple lighten-3">
                 <option value="" disabled selected>Choose States You are searching in</option>
-                <option :value="state.StatesName" v-for="state in ApiData.States">{%% state.StatesName %%}
+                <option :value="state.StatesName" v-for="state in ApiData.States">
+                  {%% state.StatesName %%}
                 </option>
               </select>
             </div>

@@ -39,27 +39,27 @@ func apiLocation(c *gin.Context) {
 // serve home page
 func home(c *gin.Context) {
 	c.HTML(http.StatusOK, "index.html", gin.H{
-		"thisjs": "public/js/main.js",
+		"thisjs": "public/custom/vue/main.js",
 	})
 }
 
 // serve vendor login page
 func vendorlogin(c *gin.Context) {
 	c.HTML(http.StatusOK, "vendor_login.html", gin.H{
-		"thisjs": "public/js/main.js",
+		"thisjs": "",
 	})
 }
 
 // serve vendor registration page
 func registration(c *gin.Context) {
 	c.HTML(http.StatusOK, "registration_form.html", gin.H{
-		"thisjs": "public/js/main.js",
+		"thisjs": "",
 	})
 }
 
 // serve vendor home page
 func vendorpage(c *gin.Context) {
 	c.HTML(http.StatusOK, "vendor_page.html", gin.H{
-		"thisjs": "public/js/main.js",
+		"thisjs": "",
 	})
 }

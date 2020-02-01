@@ -7,7 +7,7 @@ import (
 	yaml "gopkg.in/yaml.v2"
 )
 
-// Database struct to hold connection values
+// Config struct to hold connection values
 type Config struct {
 	Database struct {
 		Development struct {
@@ -22,6 +22,7 @@ type Config struct {
 	}
 }
 
+// GetYaml for recording basic
 func GetYaml() Config {
 	conf := Config{}
 	file, err := ioutil.ReadFile("E:/Go_code/src/EventShoop/connection.yaml")

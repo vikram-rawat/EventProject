@@ -9,7 +9,7 @@ import (
 func Allroutes() *gin.Engine {
 	r := gin.Default()
 	r.LoadHTMLGlob("templates/**/*")
-	r.Static("/public", "public/assets/")
+	r.Static("/public", "public/")
 	r.GET("/", home)
 	r.GET("/vendorlogin", vendorlogin)
 	r.GET("/registration", registration)
