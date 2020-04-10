@@ -1,43 +1,96 @@
-<div class="card purple lighten-4 z-depth-5" id="logininfo">
-  <div class="card-content">
-    <span class="card-title black-text text-darken-1">
-      <i class="material-icons">lock_open</i>
-      Please Enter Login Details
-    </span>
-  </div>
-  <div class="card-panel purple lighten-3">
-    <div class="row">
+<div id="loginifo">
+  <template v-if="Show.loginForm">
+    <div class="card purple lighten-4 z-depth-5">
+      <div class="card-content">
+        <span class="card-title black-text text-darken-1">
+          <i class="material-icons">lock_open</i>
+          Please Enter Login Details
+        </span>
+      </div>
+      <div class="card-panel purple lighten-3">
+        <div class="row">
+          <div class="input-field col s12 m12">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="user_name" type="text" class="validate">
+            <label for="user_name">UserName</label>
+          </div>
+          <div class="input-field col s12 m12">
+            <i class="material-icons prefix">person_pin</i>
+            <input id="password" type="password" class="validate">
+            <label for="password">Password</label>
+          </div>
 
-      <div class="input-field col s12 m12">
-        <i class="material-icons prefix">account_circle</i>
-        <input id="user_name" type="text" class="validate">
-        <label for="user_name">UserName</label>
+          <div class="input-field col s12 m6">
+            <a class="waves-effect waves-light btn" href="/vendorpage">
+              <i class="material-icons left">play_arrow</i>
+              Sign-In
+            </a>
+          </div>
+          <div class="input-field col s12 m6" @click="Show.loginForm = false">
+            <a class="waves-effect waves-light btn">
+              <i class="fas fa-user"></i>
+              Sign-Up
+            </a>
+          </div>
+          <br>
+        </div>
+        <ul>
+          <li>
+            <strong>
+              Click here if you
+              <a href="#modal2" class="purple-text text-darken-2 ">
+                forgot your password or username
+            </strong>
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="input-field col s12 m12">
-        <i class="material-icons prefix">person_pin</i>
-        <input id="password" type="password" class="validate">
-        <label for="password">Password</label>
-      </div>
-
-      <div class="input-field col s12 m6">
-        <a class="waves-effect waves-light btn" href="/vendorpage">
-          <i class="material-icons left">play_arrow</i>
-          Sign-In
-        </a>
-      </div>
-      <div class="input-field col s12 m6">
-        <a class="waves-effect waves-light btn" href="/vendorpage">
-          <i class="fas fa-user"></i>
-          Sign-Up
-        </a>
-      </div>
-      <br>
     </div>
-    <ul>
-      <li>Click here if you <a href="#modal2" class="purple-text text-darken-2 modal-trigger">forgot your password or
-          username<strong></strong></a></li>
-      <li><strong>Click Here for <a href="" class="purple-text text-darken-2 ">New
-            Registrations</a></strong></li>
-    </ul>
-  </div>
+  </template>
+  <template v-else>
+    <div class="card purple lighten-4 z-depth-5">
+      <div class="card-content">
+        <span class="card-title black-text text-darken-1">
+          <i class="material-icons">lock_open</i>
+          Please Enter Your Organizational Details
+        </span>
+      </div>
+      <div class="card-panel purple lighten-3">
+        <div class="row">
+
+          <div class="input-field col s12 m12">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="user_name" type="text" class="validate">
+            <label for="user_name">UserName</label>
+          </div>
+          <div class="input-field col s12 m12">
+            <i class="material-icons prefix">person_pin</i>
+            <input id="password" type="password" class="validate">
+            <label for="password">Password</label>
+          </div>
+
+          <div class="input-field col s12 m6">
+            <a class="waves-effect waves-light btn" href="/vendorpage">
+              <i class="material-icons left">play_arrow</i>
+              Sign-In
+            </a>
+          </div>
+          <div class="input-field col s12 m6">
+            <a class="waves-effect waves-light btn" href="/vendorpage">
+              <i class="fas fa-user"></i>
+              Sign-Up
+            </a>
+          </div>
+          <br>
+        </div>
+        <ul>
+          <li>Click here if you <a href="#modal2" class="purple-text text-darken-2 modal-trigger">forgot your password
+              or
+              username<strong></strong></a></li>
+          <li><strong>Click Here for <a href="" class="purple-text text-darken-2 ">New
+                Registrations</a></strong></li>
+        </ul>
+      </div>
+    </div>
+  </template>
 </div>
