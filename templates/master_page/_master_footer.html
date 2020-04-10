@@ -10,8 +10,6 @@
           <p class="grey-text text-lighten-4">
             something about company
           </p>
-
-
         </div>
         <div class="col l3 s12">
           <h5 class="white-text">Settings</h5>
@@ -46,7 +44,9 @@
 <script src="public/assets/js/materialize.min.js"></script>
 <script src="public/assets/js/init.js"> </script>
 <script src="public/assets/js/vue.js"> </script>
+{{range $index, $element := .}}
 <script src={{.}}> </script>
+{{end}}
 </body>
 
 </html>

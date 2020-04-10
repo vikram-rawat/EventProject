@@ -39,14 +39,14 @@ func apiLocation(c *gin.Context) {
 // serve home page
 func home(c *gin.Context) {
 	c.HTML(http.StatusOK, "index.html", gin.H{
-		"thisjs": "public/custom/vue/main.js",
+		"thisjs": []string{"public/custom/vue/homePage.js"},
 	})
 }
 
 // serve vendor login page
 func vendorlogin(c *gin.Context) {
 	c.HTML(http.StatusOK, "vendor_login.html", gin.H{
-		"thisjs": "",
+		"thisjs": []string{"public/custom/vue/loginPage.js"},
 	})
 }
 
