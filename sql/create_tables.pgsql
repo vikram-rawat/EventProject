@@ -1,145 +1,92 @@
+-- start by creating the database and schema
+-- CREATE DATABASE event_shopp
 
--- Database: event_shoop
+-- SCHEMA: details
+-- DROP SCHEMA details ;
+CREATE SCHEMA details
 
--- DROP DATABASE event_shoop;
+-- SCHEMA: dimensions
+-- DROP SCHEMA dimensions ;
+CREATE SCHEMA dimensions
 
-CREATE DATABASE event_shoop
-    WITH 
-    OWNER = postgres
-    ENCODING = 'UTF8'
-    LC_COLLATE = 'English_India.1252'
-    LC_CTYPE = 'English_India.1252'
-    TABLESPACE = pg_default
-    CONNECTION LIMIT = -1;
+-- SCHEMA: dimensions
+-- DROP SCHEMA dimensions ;
+CREATE SCHEMA proc_func
 
--- add extensions
+-- Table: dimensions.country
+-- DROP TABLE dimensions.country;
 
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
-
-CREATE EXTENSION pgcrypto;
-
--- SCHEMA: basedetails
-
--- DROP SCHEMA basedetails ;
-
-CREATE SCHEMA basedetails
-AUTHORIZATION postgres;
-
--- SCHEMA: statics
-
--- DROP SCHEMA statics ;
-
-CREATE SCHEMA statics
-AUTHORIZATION postgres;
-
--- Table: statics.country
-
--- DROP TABLE statics.country;
-
-CREATE TABLE statics.country
+CREATE TABLE dimensions.country
 (
-    countryid smallserial,
-    countryname text NOT NULL,
-    CONSTRAINT pk_country PRIMARY KEY (countryid),
-    CONSTRAINT unq_country_name UNIQUE (countryname)
-
+    countryid smallserial PRIMARY KEY,
+    countryname text NOT NULL UNIQUE,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    created_by text not null,
+    modified_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    modified_by text not null
 )
-WITH (
-    OIDS = FALSE
-)
-TABLESPACE pg_default;
 
-ALTER TABLE statics.country
-    OWNER to postgres;
+-- Table: dimensions.states
+-- DROP TABLE dimensions.states;
 
--- Table: statics.states
-
--- DROP TABLE statics.states;
-
-CREATE TABLE statics.states
+CREATE TABLE dimensions.states
 (
-    statesid serial,
-    countryid integer,
-    states_name text NOT NULL,
-    CONSTRAINT pk_states_id PRIMARY KEY (statesid),
-    CONSTRAINT unq_states_name UNIQUE (countryid, states_name)
-,
-    CONSTRAINT fk_country_id FOREIGN KEY (countryid)
-        REFERENCES statics.country (countryid) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
+    statesid serial PRIMARY KEY,
+    countryid integer REFERENCES dimensions.country (countryid),
+    states_name text NOT NULL UNIQUE,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    created_by text not null,
+    modified_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    modified_by text not null
 )
-WITH (
-    OIDS = FALSE
-)
-TABLESPACE pg_default;
 
-ALTER TABLE statics.states
-    OWNER to postgres;
+-- Table: dimensions.districts
 
--- Table: statics.districts
+-- DROP TABLE dimensions.districts;
 
--- DROP TABLE statics.districts;
-
-CREATE TABLE statics.districts
+CREATE TABLE dimensions.districts
 (
-    districtid serial,
-    statesid integer,
-    district_name text NOT NULL,
-    CONSTRAINT pk_district_id PRIMARY KEY (districtid),
-    CONSTRAINT unq_district_name UNIQUE (statesid, district_name)
-,
-    CONSTRAINT fk_states_id FOREIGN KEY (statesid)
-        REFERENCES statics.states (statesid) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
+    districtid serial PRIMARY KEY,
+    statesid integer REFERENCES dimensions.states (statesid),
+    district_name text NOT NULL  UNIQUE,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    created_by text not null,
+    modified_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    modified_by text not null
 )
-WITH (
-    OIDS = FALSE
-)
-TABLESPACE pg_default;
 
-ALTER TABLE statics.districts
-    OWNER to postgres;
+-- Table: dimensions.city
+-- DROP TABLE dimensions.city;
 
--- Table: statics.city
-
--- DROP TABLE statics.city;
-
-CREATE TABLE statics.city
+CREATE TABLE dimensions.city
 (
-    cityid serial,
-    districtid integer,
+    cityid serial PRIMARY KEY,
+    districtid integer REFERENCES dimensions.districts (districtid),
     city_name text NOT NULL,
-    CONSTRAINT pk_city_id PRIMARY KEY (cityid),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    created_by text not null,
+    modified_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    modified_by text not null,
     CONSTRAINT unq_city_name UNIQUE (districtid, city_name)
-,
-    CONSTRAINT fk_city_id FOREIGN KEY (districtid)
-        REFERENCES statics.districts (districtid) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
 )
-WITH (
-    OIDS = FALSE
-)
-TABLESPACE pg_default;
 
-ALTER TABLE statics.city
-    OWNER to postgres;
+-- Table: dimensions.services
+-- DROP TABLE dimensions.services;
 
--- Table: statics.services
--- DROP TABLE statics.services;
-CREATE TABLE statics.services(
+CREATE TABLE dimensions.services(
     serviceid serial,
     service_name text not null,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    created_by text not null,
+    modified_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    modified_by text not null,
     PRIMARY KEY (service_name)
-)
- 
+) 
 
--- Table: basedetails.userdetails
--- DROP TABLE basedetails.userdetails;
+-- Table: detail.userdetails
+-- DROP TABLE detail.userdetails;
 
-CREATE TABLE basedetails.userdetails 
+CREATE TABLE detail.userdetails 
 (
   super_id UUID NOT NULL DEFAULT uuid_generate_v4() ,
 	user_name  text not null,

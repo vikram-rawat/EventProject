@@ -1,8 +1,7 @@
--- FUNCTION: public.get_address()
+-- FUNCTION: proc_func.get_address()
+-- DROP FUNCTION proc_func.get_address();
 
--- DROP FUNCTION public.get_address();
-
-CREATE OR REPLACE FUNCTION public.get_address(
+CREATE OR REPLACE FUNCTION proc_func.get_address(
 	)
     RETURNS TABLE(states text) 
     LANGUAGE 'plpgsql'
@@ -17,21 +16,17 @@ return query
 select 
 s.states_name
 from
-statics.states as s;
+dimensions.states as s;
 
 END; 
 
 $BODY$;
 
-ALTER FUNCTION public.get_address()
-    OWNER TO postgres;
+-- FUNCTION: proc_func.get_location(text)
 
+-- DROP FUNCTION proc_func.get_location(text);
 
--- FUNCTION: public.get_location(text)
-
--- DROP FUNCTION public.get_location(text);
-
-CREATE OR REPLACE FUNCTION public.get_location(
+CREATE OR REPLACE FUNCTION proc_func.get_location(
 	statename text)
     RETURNS TABLE(location text) 
     LANGUAGE 'plpgsql'
@@ -45,19 +40,18 @@ return query
 select 
 d.district_name
 from
-statics.districts as d
-inner join statics.states as s 
+dimensions.districts as d
+inner join dimensions.states as s 
 on d.statesid = s.statesid
 where s.states_name =  stateName;
 END;
 
 $BODY$;
 
-ALTER FUNCTION public.get_location(text)
-OWNER TO postgres;
+-- FUNCTION: proc_func.get_services()
+-- DROP FUNCTION proc_func.get_services();
 
-
-CREATE OR REPLACE FUNCTION public.get_services(
+CREATE OR REPLACE FUNCTION proc_func.get_services(
 	)
     RETURNS TABLE(services text) 
     LANGUAGE 'plpgsql'
@@ -72,11 +66,8 @@ return query
 select 
 s.service_name
 from
-statics.services as s;
+dimensions.services as s;
 
 END; 
 
 $BODY$;
-
-ALTER FUNCTION public.get_services()
-    OWNER TO postgres;

@@ -12,7 +12,7 @@ type States struct {
 
 // SQLStates get data from sql query states
 func SQLStates() ([]States, error) {
-	rows, err := DB.Query("SELECT * FROM get_address()")
+	rows, err := DB.Query("SELECT * FROM proc_func.get_address()")
 	if err != nil {
 		log.Fatal(err)
 	}

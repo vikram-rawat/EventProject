@@ -12,7 +12,7 @@ type Services struct {
 
 // SQLServices get data from sql query Services
 func SQLServices() ([]Services, error) {
-	rows, err := DB.Query("SELECT * FROM get_services()")
+	rows, err := DB.Query("SELECT * FROM proc_func.get_services()")
 	if err != nil {
 		log.Fatal(err)
 	}
