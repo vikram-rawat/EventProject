@@ -1,11 +1,11 @@
-"cityid","districtid","city_name","created_at","created_by","modified_at","modified_by"
-1,1,"ajmer","2020-04-10 20:26:26.787993+05:30","vikramrawat","2020-04-10 20:26:26.787993+05:30","vikramrawat"
-2,3,"bhiwadi","2020-04-10 20:26:26.787993+05:30","vikramrawat","2020-04-10 20:26:26.787993+05:30","vikramrawat"
-3,5,"gurugram","2020-04-10 20:26:26.787993+05:30","vikramrawat","2020-04-10 20:26:26.787993+05:30","vikramrawat"
-4,8,"chirag delhi","2020-04-10 20:26:26.787993+05:30","vikramrawat","2020-04-10 20:26:26.787993+05:30","vikramrawat"
-5,9,"jama masjid","2020-04-10 20:26:26.787993+05:30","vikramrawat","2020-04-10 20:26:26.787993+05:30","vikramrawat"
-6,9,"chandni chawk","2020-04-10 20:26:26.787993+05:30","vikramrawat","2020-04-10 20:26:26.787993+05:30","vikramrawat"
-7,8,"patel chawk","2020-04-10 20:26:26.787993+05:30","vikramrawat","2020-04-10 20:26:26.787993+05:30","vikramrawat"
-8,10,"noida","2020-04-10 20:26:26.787993+05:30","vikramrawat","2020-04-10 20:26:26.787993+05:30","vikramrawat"
-9,10,"ghaziabad","2020-04-10 20:26:26.787993+05:30","vikramrawat","2020-04-10 20:26:26.787993+05:30","vikramrawat"
-10,13,"chandigarh","2020-04-10 20:26:26.787993+05:30","vikramrawat","2020-04-10 20:26:26.787993+05:30","vikramrawat"
+cityid,districtid,city_name,created_at,created_by,modified_at,modified_by,is_deleted
+1,1,ajmer,2020-04-10 20:26:26.787993+05:30,vikramrawat,2020-04-10 20:26:26.787993+05:30,vikramrawat,FALSE
+2,3,bhiwadi,2020-04-10 20:26:26.787993+05:30,vikramrawat,2020-04-10 20:26:26.787993+05:30,vikramrawat,FALSE
+3,5,gurugram,2020-04-10 20:26:26.787993+05:30,vikramrawat,2020-04-10 20:26:26.787993+05:30,vikramrawat,FALSE
+4,8,chirag delhi,2020-04-10 20:26:26.787993+05:30,vikramrawat,2020-04-10 20:26:26.787993+05:30,vikramrawat,FALSE
+5,9,jama masjid,2020-04-10 20:26:26.787993+05:30,vikramrawat,2020-04-10 20:26:26.787993+05:30,vikramrawat,FALSE
+6,9,chandni chawk,2020-04-10 20:26:26.787993+05:30,vikramrawat,2020-04-10 20:26:26.787993+05:30,vikramrawat,FALSE
+7,8,patel chawk,2020-04-10 20:26:26.787993+05:30,vikramrawat,2020-04-10 20:26:26.787993+05:30,vikramrawat,FALSE
+8,10,noida,2020-04-10 20:26:26.787993+05:30,vikramrawat,2020-04-10 20:26:26.787993+05:30,vikramrawat,FALSE
+9,10,ghaziabad,2020-04-10 20:26:26.787993+05:30,vikramrawat,2020-04-10 20:26:26.787993+05:30,vikramrawat,FALSE
+10,13,chandigarh,2020-04-10 20:26:26.787993+05:30,vikramrawat,2020-04-10 20:26:26.787993+05:30,vikramrawat,FALSE

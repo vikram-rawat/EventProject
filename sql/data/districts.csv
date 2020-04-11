@@ -1,16 +1,16 @@
-districtid,statesid,district_name,created_at,created_by,modified_at,modified_by
-1,1,ajmer,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat
-2,1,udaipur,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat
-3,1,alwar,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat
-4,1,churu,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat
-5,2,gurugram,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat
-6,2,rewari,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat
-7,2,rohtak,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat
-8,3,new delhi,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat
-9,3,old delhi,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat
-10,4,gautam buddh nagar,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat
-11,4,agra,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat
-12,4,meerut,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat
-13,5,chandigarh,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat
-14,5,ludhiana,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat
-15,5,jalandhar,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat
+districtid,statesid,district_name,created_at,created_by,modified_at,modified_by,is_deleted
+1,1,ajmer,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat,FALSE
+2,1,udaipur,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat,FALSE
+3,1,alwar,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat,FALSE
+4,1,churu,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat,FALSE
+5,2,gurugram,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat,FALSE
+6,2,rewari,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat,FALSE
+7,2,rohtak,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat,FALSE
+8,3,new delhi,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat,FALSE
+9,3,old delhi,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat,FALSE
+10,4,gautam buddh nagar,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat,FALSE
+11,4,agra,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat,FALSE
+12,4,meerut,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat,FALSE
+13,5,chandigarh,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat,FALSE
+14,5,ludhiana,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat,FALSE
+15,5,jalandhar,2020-04-10 20:06:51.705913+05:30,vikramrawat,2020-04-10 20:06:51.705913+05:30,vikramrawat,FALSE

@@ -1,11 +1,11 @@
-"serviceid","service_name","created_at","created_by","modified_at","modified_by"
-1,"dhol","2020-04-10 20:35:46.73703+05:30","vikramrawat","2020-04-10 20:35:46.73703+05:30","vikramrawat"
-2,"pundit","2020-04-10 20:35:46.73703+05:30","vikramrawat","2020-04-10 20:35:46.73703+05:30","vikramrawat"
-3,"tent","2020-04-10 20:35:46.73703+05:30","vikramrawat","2020-04-10 20:35:46.73703+05:30","vikramrawat"
-4,"dj","2020-04-10 20:35:46.73703+05:30","vikramrawat","2020-04-10 20:35:46.73703+05:30","vikramrawat"
-5,"marriage hall","2020-04-10 20:35:46.73703+05:30","vikramrawat","2020-04-10 20:35:46.73703+05:30","vikramrawat"
-6,"stadium","2020-04-10 20:35:46.73703+05:30","vikramrawat","2020-04-10 20:35:46.73703+05:30","vikramrawat"
-7,"car","2020-04-10 20:35:46.73703+05:30","vikramrawat","2020-04-10 20:35:46.73703+05:30","vikramrawat"
-8,"ghodi","2020-04-10 20:35:46.73703+05:30","vikramrawat","2020-04-10 20:35:46.73703+05:30","vikramrawat"
-9,"caterer","2020-04-10 20:35:46.73703+05:30","vikramrawat","2020-04-10 20:35:46.73703+05:30","vikramrawat"
-10,"security","2020-04-10 20:35:46.73703+05:30","vikramrawat","2020-04-10 20:35:46.73703+05:30","vikramrawat"
+serviceid,service_name,created_at,created_by,modified_at,modified_by,is_deleted
+1,dhol,2020-04-10 20:35:46.73703+05:30,vikramrawat,2020-04-10 20:35:46.73703+05:30,vikramrawat,FALSE
+2,pundit,2020-04-10 20:35:46.73703+05:30,vikramrawat,2020-04-10 20:35:46.73703+05:30,vikramrawat,FALSE
+3,tent,2020-04-10 20:35:46.73703+05:30,vikramrawat,2020-04-10 20:35:46.73703+05:30,vikramrawat,FALSE
+4,dj,2020-04-10 20:35:46.73703+05:30,vikramrawat,2020-04-10 20:35:46.73703+05:30,vikramrawat,FALSE
+5,marriage hall,2020-04-10 20:35:46.73703+05:30,vikramrawat,2020-04-10 20:35:46.73703+05:30,vikramrawat,FALSE
+6,stadium,2020-04-10 20:35:46.73703+05:30,vikramrawat,2020-04-10 20:35:46.73703+05:30,vikramrawat,FALSE
+7,car,2020-04-10 20:35:46.73703+05:30,vikramrawat,2020-04-10 20:35:46.73703+05:30,vikramrawat,FALSE
+8,ghodi,2020-04-10 20:35:46.73703+05:30,vikramrawat,2020-04-10 20:35:46.73703+05:30,vikramrawat,FALSE
+9,caterer,2020-04-10 20:35:46.73703+05:30,vikramrawat,2020-04-10 20:35:46.73703+05:30,vikramrawat,FALSE
+10,security,2020-04-10 20:35:46.73703+05:30,vikramrawat,2020-04-10 20:35:46.73703+05:30,vikramrawat,FALSE

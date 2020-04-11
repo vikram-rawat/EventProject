@@ -1,6 +1,6 @@
-"statesid","countryid","states_name","created_at","created_by","modified_at","modified_by"
-1,1,"rajasthan","2020-04-10 19:54:11.507888+05:30","vikramrawat","2020-04-10 19:54:11.507888+05:30","vikramrawat"
-2,1,"haryana","2020-04-10 19:54:11.507888+05:30","vikramrawat","2020-04-10 19:54:11.507888+05:30","vikramrawat"
-3,1,"delhi","2020-04-10 19:54:11.507888+05:30","vikramrawat","2020-04-10 19:54:11.507888+05:30","vikramrawat"
-4,1,"uttar pradesh","2020-04-10 19:54:11.507888+05:30","vikramrawat","2020-04-10 19:54:11.507888+05:30","vikramrawat"
-5,1,"punjab","2020-04-10 19:54:11.507888+05:30","vikramrawat","2020-04-10 19:54:11.507888+05:30","vikramrawat"
+statesid,countryid,states_name,created_at,created_by,modified_at,modified_by,is_deleted
+1,1,rajasthan,2020-04-10 19:54:11.507888+05:30,vikramrawat,2020-04-10 19:54:11.507888+05:30,vikramrawat,FALSE
+2,1,haryana,2020-04-10 19:54:11.507888+05:30,vikramrawat,2020-04-10 19:54:11.507888+05:30,vikramrawat,FALSE
+3,1,delhi,2020-04-10 19:54:11.507888+05:30,vikramrawat,2020-04-10 19:54:11.507888+05:30,vikramrawat,FALSE
+4,1,uttar pradesh,2020-04-10 19:54:11.507888+05:30,vikramrawat,2020-04-10 19:54:11.507888+05:30,vikramrawat,FALSE
+5,1,punjab,2020-04-10 19:54:11.507888+05:30,vikramrawat,2020-04-10 19:54:11.507888+05:30,vikramrawat,FALSE
