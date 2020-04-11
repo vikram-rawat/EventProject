@@ -37,13 +37,33 @@ CREATE OR REPLACE FUNCTION proc_func.get_location(
 AS $BODY$
 BEGIN
 return query 
+
+with join_query as(
 select 
-d.district_name
+d.district_name,
+d.districtid
 from
 dimensions.districts as d
 inner join dimensions.states as s 
 on d.statesid = s.statesid
-where s.states_name =  stateName;
+where s.states_name =  stateName	
+),
+city_query as(
+select 
+c.city_name
+from
+dimensions.city as c
+inner join
+join_query as d
+on c.districtid = d.districtid
+),
+main_query as(
+select * from city_query
+union
+select district_name from join_query
+)
+select * from main_query;
+
 END;
 
 $BODY$;
