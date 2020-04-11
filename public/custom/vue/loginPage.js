@@ -4,7 +4,8 @@ var loginForms = new Vue({
     data: {
         mainTheme: {},
         Show: {
-            loginForm: true
+            loginForm: true,
+            userCheck: false
         },
         Value: {},
         ApiData: {}

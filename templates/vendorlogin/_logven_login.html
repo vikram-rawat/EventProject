@@ -57,18 +57,28 @@
       </div>
       <div class="card-panel purple lighten-3">
         <div class="row">
-
-          <div class="input-field col s12 m12">
+          <div class="input-field col s10 m10">
             <i class="material-icons prefix">account_circle</i>
             <input id="user_name" type="text" class="validate">
             <label for="user_name">UserName</label>
           </div>
-          <div class="input-field col s12 m12">
-            <i class="material-icons prefix">person_pin</i>
-            <input id="password" type="password" class="validate">
-            <label for="password">Password</label>
+          <div class="col s2 m2 tooltipped" data-position="top" data-tooltip="I am a tooltip">
+            <div class="btn-floating pulse waves-effect waves-light purple">
+              <i class="material-icons">add_location</i>
+            </div>
           </div>
-
+          <div v-if="Show.userCheck">
+            <div class="input-field col s12 m12">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="user_name" type="text" class="validate">
+              <label for="user_name">UserName</label>
+            </div>
+            <div class="input-field col s12 m12">
+              <i class="material-icons prefix">person_pin</i>
+              <input id="password" type="password" class="validate">
+              <label for="password">Password</label>
+            </div>
+          </div>
           <div class="input-field col s12 m6">
             <a class="waves-effect waves-light btn" href="/vendorpage">
               <i class="material-icons left">play_arrow</i>
