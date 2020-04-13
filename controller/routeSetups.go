@@ -9,6 +9,17 @@ import (
 )
 
 // api for states name
+func apiVerifyUser(c *gin.Context) {
+	userid := c.Query("userid")
+
+	verifiedUser, err := models.SQLVerifyUser(userid)
+	if err != nil {
+		log.Fatal(err)
+	}
+	c.JSON(http.StatusOK, verifiedUser)
+}
+
+// api for states name
 func apiStates(c *gin.Context) {
 	states, err := models.SQLStates()
 	if err != nil {

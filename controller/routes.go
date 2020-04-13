@@ -16,9 +16,10 @@ func Allroutes() *gin.Engine {
 	r.GET("/vendorpage", vendorpage)
 	api := r.Group("/json/api")
 	{
+		api.GET("/verifyuser", apiVerifyUser)
+		api.GET("/locations", apiLocation)
 		api.GET("/states", apiStates)
 		api.GET("/services", apiServices)
-		api.GET("/locations", apiLocation)
 	}
 	return r
 }

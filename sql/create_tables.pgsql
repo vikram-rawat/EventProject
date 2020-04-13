@@ -97,11 +97,11 @@ CREATE TABLE dimensions.services(
 
 CREATE TABLE details.main_user
 (
-  super_id UUID NOT NULL DEFAULT uuid_generate_v4() ,
+    super_id UUID NOT NULL DEFAULT uuid_generate_v4() ,
     org_name text not null,
-    user_name  text not null PRIMARY KEY,
+    userid  text not null PRIMARY KEY,
 	passwords  text not null,
-    mainPhone text not null,
+    main_phone text not null,
     email text null,
     category text[] null,
     add_info JSONB,
