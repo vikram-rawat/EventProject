@@ -22,7 +22,6 @@ var loginForm = new Vue({
             $.getJSON("/json/api/verifyuser", {
                 userid: this.Input.userID
             }).then(data => {
-                console.log(data)
                 this.Value.verifiedUser = data;
             });
         }
