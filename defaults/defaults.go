@@ -3,6 +3,7 @@ package defaults
 import (
 	"io/ioutil"
 	"log"
+	"os"
 
 	yaml "gopkg.in/yaml.v2"
 )
@@ -25,7 +26,8 @@ type Config struct {
 // GetYaml for recording basic
 func GetYaml() Config {
 	conf := Config{}
-	file, err := ioutil.ReadFile("E:/Go_code/src/EventShoop/connection.yaml")
+	pwd, _ := os.Getwd()
+	file, err := ioutil.ReadFile(pwd + "/connection.yaml")
 	if err != nil {
 		log.Fatal(err)
 	}
