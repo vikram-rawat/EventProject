@@ -3,25 +3,30 @@ module EventShoop
 go 1.15
 
 require (
-	github.com/alexbrainman/sspi v0.0.0-20180613141037-e580b900e9f5 // indirect
+	github.com/0xAX/notificator v0.0.0-20191016112426-3962a5ea8da1 // indirect
+	github.com/alexbrainman/sspi v0.0.0-20200928142253-2a432fede40d // indirect
+	github.com/codegangsta/envy v0.0.0-20141216192214-4b78388c8ce4 // indirect
+	github.com/codegangsta/gin v0.0.0-20171026143024-cafe2ce98974 // indirect
 	github.com/gin-gonic/gin v1.6.3
 	github.com/go-playground/validator/v10 v10.4.1 // indirect
 	github.com/golang/protobuf v1.4.3 // indirect
 	github.com/jcmturner/gokrb5/v8 v8.4.1 // indirect
 	github.com/json-iterator/go v1.1.10 // indirect
-	github.com/lib/pq v1.8.0
+	github.com/lib/pq v1.9.0
+	github.com/mattn/go-shellwords v1.0.10 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.1 // indirect
-	github.com/ugorji/go v1.1.13 // indirect
-	golang.org/x/crypto v0.0.0-20201016220609-9e8e0b390897 // indirect
+	github.com/ugorji/go v1.2.1 // indirect
+	golang.org/x/crypto v0.0.0-20201203163018-be400aefbc4c // indirect
 	golang.org/x/net v0.0.0-20200707034311-ab3426394381 // indirect
 	//	golang.org/x/oauth2 v0.0.0-20190604053449-0f29369cfe45 // indirect
-	golang.org/x/sys v0.0.0-20201020230747-6e5568b54d1a // indirect
+	golang.org/x/sys v0.0.0-20201204225414-ed752295db88 // indirect
 	google.golang.org/protobuf v1.25.0 // indirect
 	gopkg.in/jcmturner/aescts.v1 v1.0.1 // indirect
 	gopkg.in/jcmturner/dnsutils.v1 v1.0.1 // indirect
 	gopkg.in/jcmturner/goidentity.v3 v3.0.0 // indirect
 	gopkg.in/jcmturner/gokrb5.v7 v7.5.0 // indirect
 	gopkg.in/jcmturner/rpc.v1 v1.1.0 // indirect
-	gopkg.in/yaml.v2 v2.3.0
+	gopkg.in/urfave/cli.v1 v1.20.0 // indirect
+	gopkg.in/yaml.v2 v2.4.0
 )
