@@ -12,15 +12,17 @@ require (
 	github.com/golang/protobuf v1.4.3 // indirect
 	github.com/jcmturner/gokrb5/v8 v8.4.1 // indirect
 	github.com/json-iterator/go v1.1.10 // indirect
-	github.com/lib/pq v1.9.0
-	github.com/mattn/go-shellwords v1.0.10 // indirect
+	github.com/leodido/go-urn v1.2.1 // indirect
+	github.com/lib/pq v1.10.0
+	github.com/mattn/go-shellwords v1.0.11 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.1 // indirect
-	github.com/ugorji/go v1.2.1 // indirect
-	golang.org/x/crypto v0.0.0-20201203163018-be400aefbc4c // indirect
+	github.com/silenceper/gowatch v1.5.1 // indirect
+	github.com/ugorji/go v1.2.4 // indirect
+	golang.org/x/crypto v0.0.0-20210220033148-5ea612d1eb83 // indirect
 	golang.org/x/net v0.0.0-20200707034311-ab3426394381 // indirect
 	//	golang.org/x/oauth2 v0.0.0-20190604053449-0f29369cfe45 // indirect
-	golang.org/x/sys v0.0.0-20201204225414-ed752295db88 // indirect
+	golang.org/x/sys v0.0.0-20210305230114-8fe3ee5dd75b // indirect
 	google.golang.org/protobuf v1.25.0 // indirect
 	gopkg.in/jcmturner/aescts.v1 v1.0.1 // indirect
 	gopkg.in/jcmturner/dnsutils.v1 v1.0.1 // indirect
