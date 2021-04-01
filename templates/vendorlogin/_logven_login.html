@@ -64,34 +64,27 @@
           </div>
           <div v-if="Value.verifiedUser.UserExists" class="col s2 m2" data-position="top" data-tooltip="I am a tooltip">
             <div class="btn-floating tooltipped pulse waves-effect waves-light red" @click="verifyuser">
-              <i class="material-icons">add_location</i>
+              <i class="material-icons">cancel</i>
             </div>
           </div>
           <div v-else class="col s2 m2" data-position="top" data-tooltip="I am a tooltip">
             <div class="btn-floating tooltipped pulse waves-effect waves-light green" @click="verifyuser">
-              <i class="material-icons">add_location</i>
+              <i class="material-icons">check</i>
             </div>
           </div>
-          <div v-if="Show.userCheck">
-            <div class="input-field col s12 m12">
-              <i class="material-icons prefix">account_circle</i>
-              <input id="user_name" type="text" class="validate">
-              <label for="user_name">UserName</label>
-            </div>
-            <div class="input-field col s12 m12">
-              <i class="material-icons prefix">person_pin</i>
-              <input id="password" type="password" class="validate">
-              <label for="password">Password</label>
-            </div>
+          <div class="input-field col s12 m12" v-if="!Value.verifiedUser.UserExists">
+            <i class="material-icons prefix">person_pin</i>
+            <input id="password" type="password" class="validate">
+            <label for="password">Password</label>
           </div>
-          <div class="input-field col s12 m6">
-            <a class="waves-effect waves-light btn" href="/vendorpage">
-              <i class="material-icons left">play_arrow</i>
-              Sign-In
+          <div class="input-field col s12 m6 offset-m4 offset-s4">
+            <a 
+            v-if="Value.verifiedUser.UserExists" 
+            class="waves-effect waves-light btn disabled" href="/vendorpage">
+              <i class="fas fa-user"></i>
+              Sign-Up
             </a>
-          </div>
-          <div class="input-field col s12 m6">
-            <a class="waves-effect waves-light btn" href="/vendorpage">
+            <a v-else class="waves-effect waves-light btn" href="/vendorpage">
               <i class="fas fa-user"></i>
               Sign-Up
             </a>

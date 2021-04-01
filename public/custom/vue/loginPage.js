@@ -19,11 +19,15 @@ var loginForm = new Vue({
     },
     methods: {
         verifyuser: function () {
-            $.getJSON("/json/api/verifyuser", {
-                userid: this.Input.userID
-            }).then(data => {
-                this.Value.verifiedUser = data;
-            });
+            if(this.Input.userID.length > 6 ){
+                $.getJSON("/json/api/verifyuser", {
+                    userid: this.Input.userID
+                }).then(data => {
+                    this.Value.verifiedUser = data;
+                });    
+            } else {
+                M.toast({html: 'Choose a UserName at least 7 letters ', classes: 'red rounded lighten-3'});
+            }
         }
     },
     mounted: function () {},
