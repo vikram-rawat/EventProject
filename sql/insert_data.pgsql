@@ -9,7 +9,7 @@ dimensions.country(
 	modified_by,
 	is_deleted
 )
-FROM 'E:\Go_code\src\EventShoop\sql\data\country.csv' 
+FROM 'E:\Coding\Go_code\src\EventShoop\sql\data\country.csv' 
 DELIMITER ',' 
 CSV HEADER;
 
@@ -25,7 +25,7 @@ dimensions.states(
 	modified_by,
 	is_deleted
 )
-FROM 'E:\Go_code\src\EventShoop\sql\data\states.csv' 
+FROM 'E:\Coding\Go_code\src\EventShoop\sql\data\states.csv' 
 DELIMITER ',' 
 CSV HEADER;
 
@@ -41,7 +41,7 @@ dimensions.districts(
 	modified_by,
 	is_deleted
 ) 
-FROM 'E:\Go_code\src\EventShoop\sql\data\districts.csv' 
+FROM 'E:\Coding\Go_code\src\EventShoop\sql\data\districts.csv' 
 DELIMITER ',' 
 CSV HEADER;
 
@@ -58,7 +58,7 @@ dimensions.city(
 	modified_by,
 	is_deleted
 )
-FROM 'E:\Go_code\src\EventShoop\sql\data\city.csv' 
+FROM 'E:\Coding\Go_code\src\EventShoop\sql\data\city.csv' 
 DELIMITER ',' 
 CSV HEADER;
 
@@ -74,6 +74,6 @@ dimensions.services(
 	modified_by,
 	is_deleted
 )
-FROM 'E:\Go_code\src\EventShoop\sql\data\services.csv' 
+FROM 'E:\Coding\Go_code\src\EventShoop\sql\data\services.csv' 
 DELIMITER ',' 
 CSV HEADER;
